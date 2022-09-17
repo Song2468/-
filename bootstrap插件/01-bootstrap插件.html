@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap插件</title>
+    <!-- css 文件 link 引入  -->
+    <!-- js script 引入 -->
+    <script src="./bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../../jQuery/juqeury.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab"
+                        data-toggle="tab">BMW</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                        data-toggle="tab">车型</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                        data-toggle="tab">售后</a></li>
+                <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                        data-toggle="tab">详情</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">...</div>
+                <div role="tabpanel" class="tab-pane" id="profile">车型对应的内容</div>
+                <div role="tabpanel" class="tab-pane" id="messages">售后对应的内容</div>
+                <div role="tabpanel" class="tab-pane" id="settings">详情对应的内容</div>
+            </div>
+
+        </div>
+
+        <!-- 模态框 -->
+        <button  type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Launch demo modal
+          </button>
+    </div>
+    <!-- 自定义模态框的效果 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="btn">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+</body>
+<script>
+    // jQuery 是一个js库 bootstrap 是一个基于jQuery开发的框架
+    // 在使用bootstrap js 一定要引入 jQuery js
+    // jQuery 集合 bootstrap插件进行使用可以快速的开发组件以及网站
+
+    // 使用方法
+    // 1.下载bootstrap
+    // 2.添加到项目中
+    // 3.首先引入jQuery js 文件
+    // 4.引入对应的bootstrap css js 文件
+    // 5.使用bootstrap 要有全局容器 container 全局容器
+
+    $('.btn').click(function () {
+        $('#btn').modal()
+    });
+</script>
+
+</html>
